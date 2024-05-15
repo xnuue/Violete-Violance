@@ -47,7 +47,7 @@
                   <div id="kelasz" style="display: none">
                     <label>Class</label>
                     <div class="mb-3">
-                      <input type="kelas" name="kelas" class="form-control" placeholder="Enter your Class (ex. XI PPLG 3)" aria-label="Password" aria-describedby="password-addon">
+                      <input type="kelas" name="kelas" class="form-control" placeholder="Enter your Class" aria-label="Password" aria-describedby="password-addon">
                     </div>
                   </div>
                   <div class="form-check form-check-info text-left">
