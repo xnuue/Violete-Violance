@@ -18,7 +18,7 @@
                         <div class="invalid-feedback">{{ $message }}</div> 
                     @enderror 
                     
-                    <label for="kelas" class="form-label">Student Class</label> 
+                    <label for="kelas" class="form-label">Student Section</label> 
                     <input autocomplete="off" type="text" class="form-control @error('kelas') is-invalid @enderror" id="kelas" name="kelas" value="{{ old('kelas') }}"> 
                     @error('kelas') 
                         <div class="invalid-feedback">{{ $message }}</div> 
@@ -29,7 +29,7 @@
                     @error('email') 
                         <div class="invalid-feedback">{{ $message }}</div> 
                     @enderror 
-         
+          
                     <label for="password" class="form-label">Password</label> 
                     <input autocomplete="off" type="text" class="form-control @error('password') is-invalid @enderror" id="password" name="password" value="{{ old('password') }}"> 
                     @error('password') 
@@ -37,7 +37,7 @@
                     @enderror 
 
                     <label for="role_status" class="form-label">Status</label> 
-                    <input autocomplete="off" type="" class="form-control @error('role_status') is-invalid @enderror" id="role_status" name="role_status" placeholder="Student" value="siswa" readonly> 
+                    <input autocomplete="off" type="" class="form-control @error('role_status') is-invalid @enderror" id="role_status" name="role_status" placeholder="Student" value="Student" readonly> 
 
                 </div> 
             </div> 

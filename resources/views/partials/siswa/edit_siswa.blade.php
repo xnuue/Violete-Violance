@@ -20,7 +20,7 @@
                         <div class="invalid-feedback">{{ $message }}</div> 
                     @enderror 
          
-                    <label for="kelas" class="form-label">Student Class</label> 
+                    <label for="kelas" class="form-label">Student Section</label> 
                     <input autocomplete="off" type="text" class="form-control @error('kelas') is-invalid @enderror" id="kelas" name="kelas" value="{{ old('kelas', $siswa->kelas) }}"> 
                     @error('kelas') 
                         <div class="invalid-feedback">{{ $message }}</div> 

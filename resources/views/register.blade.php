@@ -1,15 +1,14 @@
 @extends("layouts.main_register")
 @section('main_register')
-    {{-- content --}}
     <main class="main-content  mt-0">
     <section class="min-vh-100 mb-8">
-      <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('https://wallpapercave.com/wp/wp7713574.jpg');">
+      <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../assets/img/tcubg.jpg');">
         <span class="mask bg-gradient-dark opacity-6"></span>
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-5 text-center mx-auto">
               <h1 class="text-white mb-2 mt-5">Welcome!</h1>
-              <p class="text-lead text-white">Glad to see you, lets make an account!</p>
+              <p class="text-lead text-white">Glad to see you, let's make an account!</p>
             </div>
           </div>
         </div>
@@ -36,25 +35,9 @@
                   <div class="mb-3">
                     <input type="password" name="password" class="form-control" placeholder="Enter your Password (min. 8 characters)" aria-label="Password" aria-describedby="password-addon">
                   </div>
-                  <label>Account Option</label>
+                  <label>Class</label>
                   <div class="mb-3">
-                      <select class="form-select" name="role_status" aria-label="Default select example" id="role_status">
-                          <option selected value="none">None</option>
-                          <option value="admin">Admin</option>
-                          <option value="siswa">Siswa</option>
-                        </select>
-                  </div>
-                  <div id="kelasz" style="display: none">
-                    <label>Class</label>
-                    <div class="mb-3">
-                      <input type="kelas" name="kelas" class="form-control" placeholder="Enter your Class" aria-label="Password" aria-describedby="password-addon">
-                    </div>
-                  </div>
-                  <div class="form-check form-check-info text-left">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
-                    <label class="form-check-label" for="flexCheckDefault">
-                      I agree the <a href="javascript:;" class="text-dark font-weight-bolder">Terms and Conditions</a>
-                    </label>
+                    <input type="text" name="kelas" class="form-control" placeholder="Enter your Class" aria-label="Class" aria-describedby="class-addon">
                   </div>
                   <div class="text-center">
                     <button type="submit" class="btn bg-gradient-warning w-100 my-4 mb-2">Sign up</button>
@@ -67,21 +50,6 @@
         </div>
       </div>
     </section>
-    <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
     @include('partials.register.footer')
   </main>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var roleStatusSelect = document.getElementById('role_status');
-        var kelaszDiv = document.getElementById('kelasz');
-
-        roleStatusSelect.addEventListener('change', function () {
-            if (roleStatusSelect.value === 'siswa') {
-                kelaszDiv.style.display = 'block';
-            } else {
-                kelaszDiv.style.display = 'none';
-            }
-        });
-    });
-</script>
 @endsection

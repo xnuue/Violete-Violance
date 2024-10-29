@@ -74,7 +74,7 @@
                         <thead>
                           <tr>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Class</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Section</th>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
@@ -127,7 +127,7 @@
                               <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Book ID</th>
                               <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Book Title</th>
                               <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Student Name</th>
-                              <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Student Class</th>
+                              <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Student Section</th>
                               <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Student Email</th>
                             </tr>
                           </thead>

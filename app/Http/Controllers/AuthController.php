@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Siswa;
+use Illuminate\Support\Facades\Log;
+
 
 class AuthController extends Controller
 {
@@ -30,18 +32,18 @@ class AuthController extends Controller
             }
 
             return redirect()->route('login');
-
+            
         } elseif ($request->login_as === "siswa") {
             $credentials = $request->validate([
                 'email' => ['required', 'email'],
                 'password' => ['required', 'min:8'],
             ]);
-        
+
             if (Auth::guard('siswa')->attempt($credentials)) {
                 $request->session()->regenerate();
                 return redirect()->intended('dashboard_siswa');
             }
-        
+
             return redirect()->route('login');
         }
     }
@@ -49,32 +51,22 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:siswas,email',
             'password' => 'required|min:8',
-            'role_status' => 'required|in:admin,siswa',
+            'kelas' => 'required|string|max:255',
         ]);
 
         $hashedPassword = Hash::make($request->input('password'));
 
-        if ($request->input('role_status') === 'admin') {
-            User::create([
-                'name' => $request->input('name'),
-                'email' => $request->input('email'),
-                'password' => $hashedPassword,
-                'role_status' => $request->input('role_status'),
-            ]);
-        } elseif ($request->input('role_status') === 'siswa') {
-            Siswa::create([
-                'name' => $request->input('name'),
-                'email' => $request->input('email'),
-                'password' => $hashedPassword,
-                'kelas' => $request->input('kelas'),
-                'role_status' => $request->input('role_status'),
-            ]);
-        }
+        Siswa::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => $hashedPassword,
+            'kelas' => $request->input('kelas'),
+            'role_status' => 'Student',
+        ]);
 
-        return redirect()->route('login');
+        return redirect()->route('login')->with('success', 'Registration successful! Please log in.');
     }
-
 }

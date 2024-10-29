@@ -30,7 +30,7 @@
                                         <select class="form-select" name="login_as" aria-label="Default select example" id="login_as">
                                             <option selected value="none">None</option>
                                             <option value="admin">Admin</option>
-                                            <option value="siswa">Siswa</option>
+                                            <option value="student">Student</option>
                                           </select>
                                     </div>
                                     <div id="kelass" style="display: none">
@@ -59,8 +59,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
-                            <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
-                                style="background-image:url('https://wallpapercave.com/wp/wp7713574.jpg')"></div>
+                            <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-5 ms-n6"
+                                style="background-image:url('../assets/img/favicon.png')"></div>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
             $('#login_as').change(function() {
                 var selectedOption = $(this).val();
 
-                if (selectedOption === 'siswa') {
+                if (selectedOption === 'student') {
                     $('#kelass').show();
                 } else {
                     $('#kelass').hide();
